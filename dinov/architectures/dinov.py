@@ -465,10 +465,6 @@ class DINOv(nn.Module):
         :return:
         """
         if self.training:
-            try:
-                a = 9
-            except:
-                pass
             losses = {}
             if self.task_switch['coco']:
                 self.criterion = self.criterion_switch['open_set']
